@@ -1,0 +1,27 @@
+{
+    "name": "rdumpdev/laravel-rdump",
+    "description": "A simple Laravel package for debugging with a custom dump utility.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "RDumpDev\\RDump\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RDumpDev\\RDump\\RDumpServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "illuminate/support": "^9.0|^10.0|^11.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
