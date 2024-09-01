@@ -17,7 +17,6 @@ class RDump
                 'Content-Type' => 'application/json',
                 'Authorization' => config('rdump.private_key'),
             ])
-                ->timeout(config('rdump.timeout'))
                 ->post('http://rdump.dev/api/dump', [
                     'file' => $caller['file'],
                     'line' => $caller['line'],
