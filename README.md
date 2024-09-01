@@ -1,6 +1,6 @@
 # Laravel RDump
 
-A simple Laravel package for debugging remotely with a custom dump utility. 
+A simple Laravel package for debugging and tracing remotely on www.rdump.dev 
 
 ## Installation
 
