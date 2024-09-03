@@ -23,7 +23,6 @@ class RDump
                     'dump' => json_encode($data),
                     'action' => $action,
                 ]);
-            dd($e->body());
 
         } catch (ConnectionException|\Exception $e) {
             \Illuminate\Support\Facades\Log::error('Could not send dump to server ' . $e->getMessage());
