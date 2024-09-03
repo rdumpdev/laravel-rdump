@@ -17,7 +17,7 @@ class RDump
                 'Content-Type' => 'application/json',
                 'Authorization' => config('rdump.private_key'),
             ])
-                ->post('http://rdump.dev/api/dump', [
+                ->post(config('rdump.url'), [
                     'file' => $caller['file'],
                     'line' => $caller['line'],
                     'dump' => json_encode($data),
