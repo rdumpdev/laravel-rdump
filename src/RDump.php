@@ -11,7 +11,7 @@ class RDump
     {
         try {
             $backtrace = debug_backtrace();
-            $caller = $backtrace[0];
+            $caller = $backtrace[1];
 
             $e = Http::withHeaders([
                 'Content-Type' => 'application/json',
