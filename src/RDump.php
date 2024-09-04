@@ -9,6 +9,10 @@ class RDump
 {
     public static function dump(string $action, mixed $data): void
     {
+        if (config('rdump.enabled') === false) {
+            return;
+        }
+
         try {
             $backtrace = debug_backtrace();
             $caller = $backtrace[1];

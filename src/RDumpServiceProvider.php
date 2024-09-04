@@ -2,7 +2,9 @@
 
 namespace RDumpDev\RDump;
 
+use Illuminate\Foundation\Exceptions\Handler;
 use Illuminate\Support\ServiceProvider;
+
 
 class RDumpServiceProvider extends ServiceProvider
 {
@@ -11,6 +13,8 @@ class RDumpServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__ . '/../config/rdump.php', 'rdump'
         );
+
+        $this->app->singleton(Handler::class, RDumpErrorHandler::class);
     }
 
     public function boot()
