@@ -17,7 +17,7 @@ class RDump
             $backtrace = debug_backtrace();
             $caller = $backtrace[1];
 
-            $e = Http::withHeaders([
+            Http::withHeaders([
                 'Content-Type' => 'application/json',
                 'Authorization' => config('rdump.private_key'),
             ])
